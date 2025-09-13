@@ -227,21 +227,3 @@ VITE_API_URL=https://your-backend-url.com/api
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Amazon Q AI Assistant** for development guidance
-- **Tailwind CSS** for beautiful styling
-- **Recharts** for interactive charts
-- **MongoDB Atlas** for database hosting
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-1. Check the [Issues](../../issues) page
-2. Create a new issue with detailed description
-3. Include error messages and steps to reproduce
-
----
-
-**Built with ❤️ for better financial management**
