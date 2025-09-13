@@ -25,6 +25,7 @@ function Login() {
     
     console.log('Attempting login with:', { email: formData.email })
     console.log('API URL:', import.meta.env.VITE_API_URL)
+    console.log('Environment:', import.meta.env.MODE)
     
     try {
       const response = await axios.post(`${import.meta.env.VITE_API_URL}/auth/login`, formData)

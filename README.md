@@ -195,26 +195,45 @@ The application is fully responsive and works seamlessly on:
 6. **Search** for specific transactions
 7. **Test Mobile View** by resizing browser
 
-## 🚀 Deployment
+## 🚀 Deployment on Render
 
-### Backend Deployment (Heroku/Railway)
-```bash
-# Set environment variables
-MONGODB_URI=your_production_mongodb_uri
-PORT=5000
+### Quick Deploy Steps:
 
-# Deploy backend
-npm run start
-```
+1. **Push to GitHub:**
+   ```bash
+   git add .
+   git commit -m "Deploy to Render"
+   git push origin main
+   ```
 
-### Frontend Deployment (Vercel/Netlify)
-```bash
-# Build for production
-npm run build
+2. **Deploy Backend:**
+   - Go to [Render Dashboard](https://dashboard.render.com/)
+   - New Web Service → Connect GitHub repo
+   - Root Directory: `backend`
+   - Build Command: `npm install`
+   - Start Command: `npm start`
+   - Add Environment Variables:
+     ```
+     NODE_ENV=production
+     MONGODB_URI=your_mongodb_atlas_uri
+     ```
 
-# Set environment variable
-VITE_API_URL=https://your-backend-url.com/api
-```
+3. **Deploy Frontend:**
+   - New Static Site → Connect GitHub repo
+   - Root Directory: `frontend`
+   - Build Command: `npm install && npm run build`
+   - Publish Directory: `dist`
+   - Add Environment Variable:
+     ```
+     VITE_API_URL=https://your-backend-service.onrender.com/api
+     ```
+
+### 📋 Detailed Instructions:
+See [RENDER_DEPLOYMENT.md](RENDER_DEPLOYMENT.md) for complete step-by-step guide.
+
+### 🌐 Live URLs:
+- **Frontend**: `https://your-frontend-service.onrender.com`
+- **Backend API**: `https://your-backend-service.onrender.com/api`
 
 ## 🤝 Contributing
 
@@ -227,21 +246,3 @@ VITE_API_URL=https://your-backend-url.com/api
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Amazon Q AI Assistant** for development guidance
-- **Tailwind CSS** for beautiful styling
-- **Recharts** for interactive charts
-- **MongoDB Atlas** for database hosting
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-1. Check the [Issues](../../issues) page
-2. Create a new issue with detailed description
-3. Include error messages and steps to reproduce
-
----
-
-**Built with ❤️ for better financial management**
